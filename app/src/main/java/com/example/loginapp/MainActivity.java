@@ -18,6 +18,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -62,11 +64,12 @@ public class MainActivity extends AppCompatActivity {
                 registr.setVisibility(View.GONE);
                 ruls.setVisibility(View.GONE);
                 enter.setVisibility(View.GONE);
-                Toast.makeText(this, "Вы успешно зарегистрировались", Toast.LENGTH_LONG).show();
+                Snackbar.make(v, "Вы успешно зарегистрировались", Snackbar.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Неправильный логин и пароль", Toast.LENGTH_LONG).show();
+                Snackbar.make(v, "Неправильный логин и пароль", Snackbar.LENGTH_LONG).show();
             }
         });
+
 
 
 
